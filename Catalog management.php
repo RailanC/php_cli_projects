@@ -6,122 +6,117 @@ use PhpSchool\CliMenu\Action\GoBackAction;
 
 function catalogManagement(): CliMenu {
     $menuBuilder = new CliMenuBuilder();
-    $menuBuilder->setTitle('CatalogManagement');
-    define('FILE', 'json/GDU_Livre.json');
+    $menuBuilder->setTitle('Catalog Management');
+    
 
-    #Ajouter
-    $menuBuilder->addSubMenu('Ajouter un livre', function (CliMenuBuilder $ajouter) {
-        $ajouter->setTitle('Ajouter un livre')
-        ->disableDefaultItems();
-        $ajouter->addItem('Ajouter', function(CliMenu $menu){
-        $data = json_decode(file_get_contents(FILE), true) ?? ['Livres' => []];
-        $titre = readline("Titre: ");
-        echo "$titre \n";
-        $auteur = readline("Auteur: ");
-        echo "$auteur \n";
+    #Add
+    $menuBuilder->addSubMenu('Add a new book', function (CliMenuBuilder $insert) {
+        $insert->disableDefaultItems();
+        $insert->addItem('Add', function(CliMenu $menu){
+        $books = json_decode(file_get_contents(FILE_BOOKS), true) ?? ['Books' => []];
+        $title = readline("title: ");
+        echo "$title \n";
+        $author = readline("author: ");
+        echo "$author \n";
         $isbn = readline("ISBN: ");
         echo "$isbn \n";
-        $categorie = readline("Categorie: ");
-        echo "$categorie \n";
-        $disponible = readline("Disponible (0/1): ") != "0";
-        echo "$disponible \n";
+        $category = readline("category: ");
+        echo "$category \n";
+        $available = readline("available (0/1): ") != "0";
+        echo "$available \n";
         
         $newBook = [
-        "titre" => $titre,
-        "auteur" => $auteur,
+        "title" => $title,
+        "author" => $author,
         "isbn" => $isbn,
-        "categorie" => $categorie,
-        "disponible" => $disponible
+        "category" => $category,
+        "available" => $available
         ];
 
-        $data['Livres'][] = $newBook;
+        $books['Books'][] = $newBook;
 
-        file_put_contents(FILE, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-        echo "\n✅ Le livre a été ajouté avec succès!\n";
+        file_put_contents(FILE_BOOKS, json_encode($books, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+        echo "\n✅ The book has been updated with success!\n";
         fgets(STDIN);
         $menu->close();
         });
-        $ajouter->addItem("Go Back", new GoBackAction);
+        $insert->addItem("Go Back", new GoBackAction);
     });   
     
-    #Modifier
-    $menuBuilder->addSubMenu('Modifier des livres', function (CliMenuBuilder $modifer) {
-    $modifer->setTitle('Liste des livres disponibles')
+    #Update
+    $menuBuilder->addSubMenu('Update a book', function (CliMenuBuilder $update) {
+    $update->setTitle('List of available books')
     ->disableDefaultItems();
 
-    $data = json_decode(file_get_contents(FILE), true) ?? ['Livres' => []];
-    $file = FILE;
-    foreach ($data['Livres'] as $index => $book) {
-        $modifer->addSubMenu($book['titre'], function (CliMenuBuilder $modifer2) use (&$data, $index, $file) {
-            $modifer2->setTitle("Modifier le livre: " . $data['Livres'][$index]['titre'])
+    $books = json_decode(file_get_contents(FILE_BOOKS), true) ?? ['Books' => []];
+    foreach ($books['Books'] as $index => $book) {
+        $update->addSubMenu($book['title'], function (CliMenuBuilder $update2) use (&$books, $index) {
+            $update2->setTitle("Update : " . $books['Books'][$index]['title'])
             ->disableDefaultItems();
 
-            $fields = ['titre', 'auteur', 'isbn', 'categorie', 'disponible'];
+            $fields = ['title', 'author', 'isbn', 'category', 'available'];
 
             foreach ($fields as $field) {
-                $modifer2->addItem("Modifier $field", function (CliMenu $menu) use (&$data, $index, $file, $field) {
-                    echo "Nouvelle valeur pour $field: ";
+                $update2->addItem("Update $field", function (CliMenu $menu) use (&$books, $index, $field) {
+                    echo "Set a new value for $field: ";
                     $newValue = trim(fgets(STDIN));
 
-                    if ($field === 'disponible') {
-                    $newValue = $newValue == 0 ? false : true;
+                    if ($field === 'available') {
+                        $newValue = $newValue == 0 ? false : true;
                     }
 
-                    $data['Livres'][$index][$field] = $newValue;
-                    file_put_contents(FILE, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+                    $books['Books'][$index][$field] = $newValue;
+                    file_put_contents(FILE_BOOKS, json_encode($books, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
-                    echo "\n✅ $field modifié avec succès!\n";
-                    echo "Appuyez sur Entrée pour revenir au menu...";
+                    echo "\n✅ $field updated with success!\n";
+                    echo "Press enter to continue...";
                     fgets(STDIN);
                     $menu->close();
                 });
             }
-            $modifer2->addItem('Go Back', new GoBackAction);
+            $update2->addItem('Go Back', new GoBackAction);
         });
     }
-    $modifer ->addItem('Go Back', new GoBackAction);
+    $update ->addItem('Go Back', new GoBackAction);
     });
     
-    #Supprimer
-    $menuBuilder->addSubMenu('Supprimer des Livres', function (CliMenuBuilder $supprimer) {
-        $supprimer->setTitle('Liste des livres disponibles')
+    #Delete
+    $menuBuilder->addSubMenu('Delete a Books', function (CliMenuBuilder $delete) {
+        $delete->setTitle('List of books')
         ->disableDefaultItems();
 
-        $data = json_decode(file_get_contents(FILE), true) ?? ['Livres' => []];
-        $file = FILE;
+        $books = json_decode(file_get_contents(FILE_BOOKS), true) ?? ['Books' => []];
 
-        foreach ($data['Livres'] as $index => $book) {
-            $supprimer->addSubMenu($book['titre'], function (CliMenuBuilder $supprimer2) use (&$data, $index, $file){
-                $supprimer2->setTitle("Supprimer")
+        foreach ($books['Books'] as $index => $book) {
+            $delete->addSubMenu($book['title'], function (CliMenuBuilder $supprimer2) use (&$books, $index){
+                $supprimer2->setTitle("Delete")
                 ->disableDefaultItems();
-                $supprimer2->addItem("Oui", function(CliMenu $menu) use (&$data, $index, $file){
-                    array_splice($data['Livres'], $index , 1);
-                    file_put_contents(FILE, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-                    echo "\n✅ Livre supprimé avec succès!\n";
+                $supprimer2->addItem("Yes", function(CliMenu $menu) use (&$books, $index){
+                    array_splice($books['Books'], $index , 1);
+                    file_put_contents(FILE_BOOKS, json_encode($books, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+                    echo "\n✅ Book has been deleted with success!\n";
                     fgets(STDIN);
                     $menu->close();
                 });
-                $supprimer2->addItem('Non', new GoBackAction);
+                $supprimer2->addItem('No', new GoBackAction);
             });
         }
-        $supprimer->addItem('Go Back', new GoBackAction);
+        $delete->addItem('Go Back', new GoBackAction);
         
     });
     
-    #Rechercher 
-    $menuBuilder->addSubMenu('Rechercher des Livres', function(CliMenuBuilder $rechercher){
-        $rechercher->setTitle('Rechercher un livre')
-        ->disableDefaultItems();
-        $data = json_decode(file_get_contents(FILE), true) ?? ['Livres' => []];
-        $file = FILE;
+    #Search 
+    $menuBuilder->addSubMenu('Search a book', function(CliMenuBuilder $search){
+        $search->disableDefaultItems();
+        $books = json_decode(file_get_contents(FILE_BOOKS), true) ?? ['Books' => []];
         $found = false;
-        $rechercher->addItem("Rechercher", function(CliMenu $menu) use (&$data, $file, &$found){
-            $request_rechercher = strtolower(readline("Rechercher un livre: "));
+        $search->addItem("Search", function(CliMenu $menu) use (&$books, $FILE_BOOKS, &$found){
+            $request_rechercher = strtolower(readline("Search un livre: "));
             echo $request_rechercher . "\n";
-            foreach($data['Livres'] as $book){
-                if(str_contains(strtolower($book['titre']), $request_rechercher)){
+            foreach($books['Books'] as $book){
+                if(str_contains(strtolower($book['title']), $request_rechercher)){
                     $found = true;
-                    echo $book['titre'] . "\n";
+                    echo $book['title'] . "\n";
                 }
             }
 
@@ -132,7 +127,7 @@ function catalogManagement(): CliMenu {
             fgets(STDIN);
             $menu->close();
         });
-        $rechercher->addItem('Go Back', new GoBackAction);
+        $search->addItem('Go Back', new GoBackAction);
     });
     return $menuBuilder->build();
 }

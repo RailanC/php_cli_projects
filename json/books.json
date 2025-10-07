@@ -1,0 +1,11 @@
+{
+    "Books": [
+        {
+            "title": "Power 48 loi du pouvoir",
+            "author": "Robert Greene",
+            "isbn": "978-04514141332",
+            "category": "Test2",
+            "available": false
+        }
+    ]
+}

@@ -3,7 +3,8 @@ require __DIR__ . '/vendor/autoload.php';
 use PhpSchool\CliMenu\MenuItem\AsciiArtItem;
 use PhpSchool\CliMenu\Builder\CliMenuBuilder;
 use PhpSchool\CliMenu\CliMenu;
-
+define('FILE_USERS', 'json/users.json');
+define('FILE_BOOKS', 'json/books.json');
 function printCenteredAscii($text) {
     $columns = exec('tput cols') ?: 80;
     $lines = explode("\n", $text);
@@ -19,11 +20,11 @@ function printCenteredAscii($text) {
 }
 
 $asciiArt = <<<ART
-          (+)
- __ __ _ _ _ _     _ _ _____ 
-| '__/ _` | | |  / _` |  _  | 
-| | | (_| | | |_| (_| | | | | 
-|_|  \__,_|_|____\__,_|_| |_| 
+██      ██ ██████  ██████   █████  ██████  ██    ██ 
+██      ██ ██   ██ ██   ██ ██   ██ ██   ██  ██  ██  
+██      ██ ██████  ██████  ███████ ██████    ████   
+██      ██ ██   ██ ██   ██ ██   ██ ██   ██    ██    
+███████ ██ ██████  ██   ██ ██   ██ ██   ██    ██                                                                                                                                                            
 ART;
 
 $menuBuilder = ($builder = new CliMenuBuilder)
