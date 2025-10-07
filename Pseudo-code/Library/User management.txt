@@ -1,0 +1,42 @@
+Structure de données(pseudo-code):
+Users = {
+    id: int,
+    name: string,
+}
+
+Users [];
+
+FUNCTION add_user(user)
+    IF validate_user(user) THEN
+        ADD user -> Users
+    END IF
+END FUNCTION
+
+FUNCTION update_user(id, new_data)
+    FOREACH CHANQUE user DANS Users
+        SI user['id'] == id THEN
+            SI validate_user(user_with_new_data) THEN
+                UPDATE user WITH new_data
+                RETURN TRUE
+            END IF
+        END IF
+    END FOREACH
+    RETURN FALSE
+END FUNCTION
+
+FUNCTION validate_user(user)
+    IF user['name'] == empty THEN
+        RETURN FAUX, "The name can't be empty"
+    END IF
+
+    IF user['id'] == empty THEN
+        RETURN FAUX, "The id can't be empty"
+    END IF
+
+    FOREACH u in Users
+        IF u['id'] == user[id] THEN
+            RETURN FAUX
+        END IF
+    END FOREACH
+
+END FUNCTION

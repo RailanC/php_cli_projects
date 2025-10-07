@@ -32,8 +32,8 @@ $menuBuilder = ($builder = new CliMenuBuilder)
 ->setBackgroundColour('black')
 ->setForegroundColour('green')
 ;
-$menuBuilder->addItem('Bibliothèque', function () {
-    require_once __DIR__ . '/Bibliotheque.php';
+$menuBuilder->addItem('Catalog management', function () {
+    require_once __DIR__ . '/Catalog management.php';
     system('clear');
     $submenu = gestionDuCatalogueMenu();
     $submenu->open();

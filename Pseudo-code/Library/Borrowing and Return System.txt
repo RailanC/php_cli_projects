@@ -1,0 +1,68 @@
+Data Structure (pseudo-code):
+borrow = {
+    user_id: int,
+    book_isbn: string,
+    borrowed_at: string, // ex: '2025-10-05'
+    returned_at: string, // ex: '2025-10-12'
+    durration: int, // in days
+}
+
+borrows []
+
+FUNCTION borrow_book(user, book, borrow_date)
+    IF book_exist(!book['isbn'])
+        RETURN FALSE, "The book does not exist"
+    END IF
+
+    IF user_exist(!user)
+        RETURN FALSE, "The user does not exist"
+    END IF
+
+    IF book['available']
+        CREATE borrow with user['id'], book['isbn'], borrowed_at AND durration
+        ADD borrow TO borrows
+        UPDATE book['available'] TO FALSE
+        RETURN TRUE
+    END IF
+
+    RETURN FALSE
+END FUNCTION
+
+FUNCTION book_exist(isbn)
+    FOR EACH book in books
+        IF book[isbn] == isbn
+            RETURN TRUE
+        END IF
+    END FOR
+    RETURN FALSE
+END FUNCTION
+
+FUNCTION user_exist(user)
+    FOR EACH u in users
+        IF u[id] == user[id]
+            RETURN TRUE
+        END IF
+    END FOR
+    RETURN FALSE
+END FUNCTION
+
+FUNCTION return_book(user, isbn, return_date)
+    IF borrow['isbn'] AND borrow['user_id'] IS EQUAL TO user['id'] exist
+        UPDATE returned_at TO return_date
+        UPDATE durration TO borrowed_at DIFF returned_at
+        UPDATE book['available'] TO TRUE
+        RETURN TRUE
+    END
+    RETURN FALSE
+END FUNCTION
+
+FUNCTION check_delays(user)
+    FOR EACH borrow IN borrows
+        IF borrow[user_id] == user['id'] THEN
+            UPDATE durration TO borrowed_at DIFF returned_at
+            SHOW borrow
+        END
+    END FOR
+
+    RETURN TRUE
+END FUNCTION

@@ -1,0 +1,43 @@
+Data Structure (pseudo-code):
+book = {
+	title: string, 
+	author: string,
+	isbn: string,
+	category: string, 
+	available: boolean
+	};
+books []
+
+FUNCTION add_book(book)
+	AJOUTER book ->  books
+END FUNCTION
+
+FUNCTION update_book(index, new_data)
+	FOR EACH book IN books
+		IF book['index'] == index THEN
+			UPDATE book WITH new_data
+			RETURN TRUE
+		END IF
+	END FOR
+	RETURN FALSE
+END FUNCTION
+
+FUNCTION delete_book(title)
+	FOR EACH book DANS books
+		IF book['title'] == title THEN
+			DELETE book IN books
+			RETURN TRUE
+		END IF
+	END FOR
+	RETURN FALSE
+END FUNCTION
+	 
+FUNCTION search_book(search)
+	resultats{}
+	FOR EACH book IN books
+		IF search IS IN book['title'] THEN
+			ADD book TO resultats
+		END IF
+	END FOR
+	RETURN resultats
+END FUNCTION

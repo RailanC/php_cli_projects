@@ -1,0 +1,34 @@
+(pseudo-code)
+
+FUNCTION most_borrewed_books()
+    FOR EACH book in books
+        count = 0
+        FOR EACH borrow in borrows
+            IF borrow['book_isbn'] == book['isbn']
+                count = count + 1
+            END IF
+        END FOR
+        SHOW book['title'] AND count 
+    END FOR
+END FUNCTION
+
+FUNCTION popular_categories()
+    CREATE list [KEY = 'category', VALUE = 'quantity']
+    FOR EACH borrow in borrows
+        category = books[borrow.book_isbn].category
+        IF category EXISTS IN list
+            INCREMENT list[category].quantity
+        ELSE
+            ADD {category: category, quantity: 1} TO list
+        END IF
+    END FOR
+    SHOW list ORDER BY quantity DESC
+END FUNCTION
+
+FUNCTION report(month)
+    FOR EACH borrow IN borrows
+        IF MONTH(borrow['borrowed_at']) == month THEN
+            SHOW borrow
+        END IF
+    END FOR
+END FUNCTION
