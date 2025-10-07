@@ -32,13 +32,41 @@ $menuBuilder = ($builder = new CliMenuBuilder)
 ->setBackgroundColour('black')
 ->setForegroundColour('green')
 ;
+
 $menuBuilder->addItem('Catalog management', function () {
     require_once __DIR__ . '/Catalog management.php';
     system('clear');
-    $submenu = gestionDuCatalogueMenu();
+    $submenu = catalogManagement();
     $submenu->open();
     $submenu->close();
 });
+
+$menuBuilder->addItem('User management', function () {
+    require_once __DIR__ . '/User management.php';
+    system('clear');
+    $submenu = userManagement();
+    $submenu->open();
+    $submenu->close();
+});
+
+$menuBuilder->addItem('Borrowing and Return System', function () {
+    require_once __DIR__ . '/Borrowing and Return System.php';
+    system('clear');
+    $submenu = borrowingReturnSystem();
+    $submenu->open();
+    $submenu->close();
+});
+
+$menuBuilder->addItem('Statistics and reports', function () {
+    require_once __DIR__ . '/Statistics and reports.php';
+    system('clear');
+    $submenu = statisticsReports();
+    $submenu->open();
+    $submenu->close();
+});
+
+
+
 
 
 $menu = $menuBuilder->build();

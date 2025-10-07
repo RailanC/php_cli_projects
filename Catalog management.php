@@ -4,9 +4,9 @@ use PhpSchool\CliMenu\CliMenu;
 use PhpSchool\CliMenu\Action\ExitAction;
 use PhpSchool\CliMenu\Action\GoBackAction;
 
-function gestionDuCatalogueMenu(): CliMenu {
+function catalogManagement(): CliMenu {
     $menuBuilder = new CliMenuBuilder();
-    $menuBuilder->setTitle('Gestion du Catalogue');
+    $menuBuilder->setTitle('CatalogManagement');
     define('FILE', 'json/GDU_Livre.json');
 
     #Ajouter
