@@ -55,14 +55,3 @@ FUNCTION return_book(user, isbn, return_date)
     END
     RETURN FALSE
 END FUNCTION
-
-FUNCTION check_delays(user)
-    FOR EACH borrow IN borrows
-        IF borrow[user_id] == user['id'] THEN
-            UPDATE durration TO borrowed_at DIFF returned_at
-            SHOW borrow
-        END
-    END FOR
-
-    RETURN TRUE
-END FUNCTION

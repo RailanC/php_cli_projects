@@ -9,7 +9,7 @@ function catalogManagement(): CliMenu {
     $menuBuilder->setTitle('Catalog Management');
     
 
-    #Add
+    //Add
     $menuBuilder->addSubMenu('Add a new book', function (CliMenuBuilder $insert) {
         $insert->disableDefaultItems();
         $insert->addItem('Add', function(CliMenu $menu){
@@ -43,7 +43,7 @@ function catalogManagement(): CliMenu {
         $insert->addItem("Go Back", new GoBackAction);
     });   
     
-    #Update
+    //Update
     $menuBuilder->addSubMenu('Update a book', function (CliMenuBuilder $update) {
     $update->setTitle('List of available books')
     ->disableDefaultItems();
@@ -80,7 +80,7 @@ function catalogManagement(): CliMenu {
     $update ->addItem('Go Back', new GoBackAction);
     });
     
-    #Delete
+    //Delete
     $menuBuilder->addSubMenu('Delete a Books', function (CliMenuBuilder $delete) {
         $delete->setTitle('List of books')
         ->disableDefaultItems();
@@ -105,7 +105,7 @@ function catalogManagement(): CliMenu {
         
     });
     
-    #Search 
+    //Search 
     $menuBuilder->addSubMenu('Search a book', function(CliMenuBuilder $search){
         $search->disableDefaultItems();
         $books = json_decode(file_get_contents(FILE_BOOKS), true) ?? ['Books' => []];

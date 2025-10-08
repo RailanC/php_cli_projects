@@ -1,0 +1,25 @@
+{
+    "Borrows": [
+        {
+            "user_id": "2",
+            "book_isbn": "978-04514141332",
+            "borrowed_at": "05\/10\/2025",
+            "returned_at": "",
+            "duration": 0
+        },
+        {
+            "user_id": "1",
+            "book_isbn": "978-0143127741",
+            "borrowed_at": "05\/10\/2025",
+            "returned_at": "",
+            "duration": 0
+        },
+        {
+            "user_id": "1",
+            "book_isbn": "978-0441172719",
+            "borrowed_at": "05\/10\/2025",
+            "returned_at": "08\/10\/2025",
+            "duration": 3
+        }
+    ]
+}

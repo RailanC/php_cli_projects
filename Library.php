@@ -5,6 +5,7 @@ use PhpSchool\CliMenu\Builder\CliMenuBuilder;
 use PhpSchool\CliMenu\CliMenu;
 define('FILE_USERS', 'json/users.json');
 define('FILE_BOOKS', 'json/books.json');
+define('FILE_BORROWS', 'json/borrows.json');
 function printCenteredAscii($text) {
     $columns = exec('tput cols') ?: 80;
     $lines = explode("\n", $text);

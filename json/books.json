@@ -6,6 +6,510 @@
             "isbn": "978-04514141332",
             "category": "Test2",
             "available": false
+        },
+        {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "isbn": "978-0735211292",
+            "category": "Self Help",
+            "available": true
+        },
+        {
+            "title": "The Subtle Art of Not Giving a F*ck",
+            "author": "Mark Manson",
+            "isbn": "978-0062457714",
+            "category": "Personal Growth",
+            "available": true
+        },
+        {
+            "title": "Deep Work",
+            "author": "Cal Newport",
+            "isbn": "978-1455586691",
+            "category": "Productivity",
+            "available": false
+        },
+        {
+            "title": "The Psychology of Money",
+            "author": "Morgan Housel",
+            "isbn": "978-0857197689",
+            "category": "Finance",
+            "available": true
+        },
+        {
+            "title": "The 7 Habits of Highly Effective People",
+            "author": "Stephen R. Covey",
+            "isbn": "978-0743269513",
+            "category": "Leadership",
+            "available": false
+        },
+        {
+            "title": "Rich Dad Poor Dad",
+            "author": "Robert T. Kiyosaki",
+            "isbn": "978-1612681139",
+            "category": "Finance",
+            "available": true
+        },
+        {
+            "title": "Man’s Search for Meaning",
+            "author": "Viktor E. Frankl",
+            "isbn": "978-0807014295",
+            "category": "Philosophy",
+            "available": true
+        },
+        {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "isbn": "978-0374533557",
+            "category": "Psychology",
+            "available": false
+        },
+        {
+            "title": "Can’t Hurt Me",
+            "author": "David Goggins",
+            "isbn": "978-1544512273",
+            "category": "Motivation",
+            "available": true
+        },
+        {
+            "title": "The Alchemist",
+            "author": "Paulo Coelho",
+            "isbn": "978-0061122415",
+            "category": "Fiction",
+            "available": true
+        },
+        {
+            "title": "Sapiens: A Brief History of Humankind",
+            "author": "Yuval Noah Harari",
+            "isbn": "978-0062316097",
+            "category": "History",
+            "available": false
+        },
+        {
+            "title": "Meditations",
+            "author": "Marcus Aurelius",
+            "isbn": "978-1503280465",
+            "category": "Philosophy",
+            "available": true
+        },
+        {
+            "title": "Zero to One",
+            "author": "Peter Thiel",
+            "isbn": "978-0804139298",
+            "category": "Business",
+            "available": true
+        },
+        {
+            "title": "The Lean Startup",
+            "author": "Eric Ries",
+            "isbn": "978-0307887894",
+            "category": "Business",
+            "available": false
+        },
+        {
+            "title": "Grit: The Power of Passion and Perseverance",
+            "author": "Angela Duckworth",
+            "isbn": "978-1501111105",
+            "category": "Self Help",
+            "available": true
+        },
+        {
+            "title": "Drive: The Surprising Truth About What Motivates Us",
+            "author": "Daniel H. Pink",
+            "isbn": "978-1594484803",
+            "category": "Psychology",
+            "available": true
+        },
+        {
+            "title": "Educated",
+            "author": "Tara Westover",
+            "isbn": "978-0399590504",
+            "category": "Memoir",
+            "available": false
+        },
+        {
+            "title": "Becoming",
+            "author": "Michelle Obama",
+            "isbn": "978-1524763138",
+            "category": "Memoir",
+            "available": true
+        },
+        {
+            "title": "The Power of Now",
+            "author": "Eckhart Tolle",
+            "isbn": "978-1577314806",
+            "category": "Spirituality",
+            "available": true
+        },
+        {
+            "title": "You Are a Badass",
+            "author": "Jen Sincero",
+            "isbn": "978-0762447695",
+            "category": "Self Help",
+            "available": true
+        },
+        {
+            "title": "The Four Agreements",
+            "author": "Don Miguel Ruiz",
+            "isbn": "978-1878424310",
+            "category": "Spirituality",
+            "available": false
+        },
+        {
+            "title": "How to Win Friends & Influence People",
+            "author": "Dale Carnegie",
+            "isbn": "978-0671027032",
+            "category": "Self Help",
+            "available": true
+        },
+        {
+            "title": "The Art of War",
+            "author": "Sun Tzu",
+            "isbn": "978-1590302255",
+            "category": "Philosophy",
+            "available": false
+        },
+        {
+            "title": "7 Habits of Highly Effective Teens",
+            "author": "Sean Covey",
+            "isbn": "978-1476764668",
+            "category": "Teen",
+            "available": true
+        },
+        {
+            "title": "Tools of Titans",
+            "author": "Tim Ferriss",
+            "isbn": "978-1328683786",
+            "category": "Business",
+            "available": false
+        },
+        {
+            "title": "Daring Greatly",
+            "author": "Brené Brown",
+            "isbn": "978-1592408412",
+            "category": "Psychology",
+            "available": true
+        },
+        {
+            "title": "Quiet: The Power of Introverts in a World That Can't Stop Talking",
+            "author": "Susan Cain",
+            "isbn": "978-0307352156",
+            "category": "Psychology",
+            "available": false
+        },
+        {
+            "title": "Outliers",
+            "author": "Malcolm Gladwell",
+            "isbn": "978-0316017930",
+            "category": "Sociology",
+            "available": true
+        },
+        {
+            "title": "Influence: The Psychology of Persuasion",
+            "author": "Robert B. Cialdini",
+            "isbn": "978-0061241895",
+            "category": "Psychology",
+            "available": true
+        },
+        {
+            "title": "Blink: The Power of Thinking Without Thinking",
+            "author": "Malcolm Gladwell",
+            "isbn": "978-0316010665",
+            "category": "Psychology",
+            "available": true
+        },
+        {
+            "title": "The Richest Man in Babylon",
+            "author": "George S. Clason",
+            "isbn": "978-1505339110",
+            "category": "Finance",
+            "available": false
+        },
+        {
+            "title": "The Road Less Traveled",
+            "author": "M. Scott Peck",
+            "isbn": "978-0743243155",
+            "category": "Self Help",
+            "available": true
+        },
+        {
+            "title": "The Miracle Morning",
+            "author": "Hal Elrod",
+            "isbn": "978-0979019715",
+            "category": "Motivation",
+            "available": true
+        },
+        {
+            "title": "Mindset: The New Psychology of Success",
+            "author": "Carol S. Dweck",
+            "isbn": "978-0345472328",
+            "category": "Self Help",
+            "available": false
+        },
+        {
+            "title": "The One Thing",
+            "author": "Gary Keller & Jay Papasan",
+            "isbn": "978-0804137035",
+            "category": "Productivity",
+            "available": true
+        },
+        {
+            "title": "Essentialism: The Disciplined Pursuit of Less",
+            "author": "Greg McKeown",
+            "isbn": "978-0804137387",
+            "category": "Philosophy",
+            "available": false
+        },
+        {
+            "title": "Start with Why",
+            "author": "Simon Sinek",
+            "isbn": "978-1591846444",
+            "category": "Business",
+            "available": true
+        },
+        {
+            "title": "The Obstacle Is the Way",
+            "author": "Ryan Holiday",
+            "isbn": "978-1591846352",
+            "category": "Stoicism",
+            "available": true
+        },
+        {
+            "title": "Ego Is the Enemy",
+            "author": "Ryan Holiday",
+            "isbn": "978-1591847815",
+            "category": "Stoicism",
+            "available": false
+        },
+        {
+            "title": "The War of Art",
+            "author": "Steven Pressfield",
+            "isbn": "978-1936891023",
+            "category": "Creativity",
+            "available": true
+        },
+        {
+            "title": "Range: Why Generalists Triumph in a Specialized World",
+            "author": "David Epstein",
+            "isbn": "978-0735214483",
+            "category": "Education",
+            "available": false
+        },
+        {
+            "title": "The Body Keeps the Score",
+            "author": "Bessel van der Kolk",
+            "isbn": "978-0143127741",
+            "category": "Health",
+            "available": false
+        },
+        {
+            "title": "Flow: The Psychology of Optimal Experience",
+            "author": "Mihaly Csikszentmihalyi",
+            "isbn": "978-0061339202",
+            "category": "Psychology",
+            "available": true
+        },
+        {
+            "title": "Originals: How Non-Conformists Move the World",
+            "author": "Adam Grant",
+            "isbn": "978-0525429560",
+            "category": "Leadership",
+            "available": false
+        },
+        {
+            "title": "The Four Loves",
+            "author": "C. S. Lewis",
+            "isbn": "978-0060958529",
+            "category": "Philosophy",
+            "available": true
+        },
+        {
+            "title": "Letters from a Stoic",
+            "author": "Seneca",
+            "isbn": "978-0140442106",
+            "category": "Philosophy",
+            "available": true
+        },
+        {
+            "title": "Tiny Beautiful Things",
+            "author": "Cheryl Strayed",
+            "isbn": "978-0307887430",
+            "category": "Memoir",
+            "available": false
+        },
+        {
+            "title": "The Five People You Meet in Heaven",
+            "author": "Mitch Albom",
+            "isbn": "978-0767905923",
+            "category": "Fiction",
+            "available": true
+        },
+        {
+            "title": "The Book Thief",
+            "author": "Markus Zusak",
+            "isbn": "978-0375842207",
+            "category": "Historical Fiction",
+            "available": true
+        },
+        {
+            "title": "A Gentleman in Moscow",
+            "author": "Amor Towles",
+            "isbn": "978-0670026197",
+            "category": "Fiction",
+            "available": false
+        },
+        {
+            "title": "All the Light We Cannot See",
+            "author": "Anthony Doerr",
+            "isbn": "978-1501173219",
+            "category": "Fiction",
+            "available": true
+        },
+        {
+            "title": "The Nightingale",
+            "author": "Kristin Hannah",
+            "isbn": "978-0312577223",
+            "category": "Fiction",
+            "available": false
+        },
+        {
+            "title": "Where the Crawdads Sing",
+            "author": "Delia Owens",
+            "isbn": "978-0735219090",
+            "category": "Fiction",
+            "available": true
+        },
+        {
+            "title": "The Great Alone",
+            "author": "Kristin Hannah",
+            "isbn": "978-0312577230",
+            "category": "Fiction",
+            "available": false
+        },
+        {
+            "title": "Normal People",
+            "author": "Sally Rooney",
+            "isbn": "978-0571334650",
+            "category": "Fiction",
+            "available": true
+        },
+        {
+            "title": "The Silent Patient",
+            "author": "Alex Michaelides",
+            "isbn": "978-1250301697",
+            "category": "Thriller",
+            "available": true
+        },
+        {
+            "title": "Circe",
+            "author": "Madeline Miller",
+            "isbn": "978-0316556347",
+            "category": "Fantasy",
+            "available": false
+        },
+        {
+            "title": "The Song of Achilles",
+            "author": "Madeline Miller",
+            "isbn": "978-0062060624",
+            "category": "Fantasy",
+            "available": true
+        },
+        {
+            "title": "Project Hail Mary",
+            "author": "Andy Weir",
+            "isbn": "978-0593135204",
+            "category": "Science Fiction",
+            "available": true
+        },
+        {
+            "title": "The Martian",
+            "author": "Andy Weir",
+            "isbn": "978-0553418026",
+            "category": "Science Fiction",
+            "available": false
+        },
+        {
+            "title": "Dune",
+            "author": "Frank Herbert",
+            "isbn": "978-0441172719",
+            "category": "Science Fiction",
+            "available": true
+        },
+        {
+            "title": "Neuromancer",
+            "author": "William Gibson",
+            "isbn": "978-0441569595",
+            "category": "Science Fiction",
+            "available": false
+        },
+        {
+            "title": "The Hitchhiker's Guide to the Galaxy",
+            "author": "Douglas Adams",
+            "isbn": "978-0345391803",
+            "category": "Comedy",
+            "available": true
+        },
+        {
+            "title": "Good Omens",
+            "author": "Neil Gaiman & Terry Pratchett",
+            "isbn": "978-0060853983",
+            "category": "Fantasy",
+            "available": true
+        },
+        {
+            "title": "Anansi Boys",
+            "author": "Neil Gaiman",
+            "isbn": "978-0061476614",
+            "category": "Fantasy",
+            "available": false
+        },
+        {
+            "title": "American Gods",
+            "author": "Neil Gaiman",
+            "isbn": "978-0062572233",
+            "category": "Fantasy",
+            "available": true
+        },
+        {
+            "title": "The Name of the Wind",
+            "author": "Patrick Rothfuss",
+            "isbn": "978-0756404741",
+            "category": "Fantasy",
+            "available": true
+        },
+        {
+            "title": "Mistborn: The Final Empire",
+            "author": "Brandon Sanderson",
+            "isbn": "978-0765311788",
+            "category": "Fantasy",
+            "available": false
+        },
+        {
+            "title": "Elantris",
+            "author": "Brandon Sanderson",
+            "isbn": "978-0765365124",
+            "category": "Fantasy",
+            "available": true
+        },
+        {
+            "title": "The Way of Kings",
+            "author": "Brandon Sanderson",
+            "isbn": "978-0765326355",
+            "category": "Fantasy",
+            "available": true
+        },
+        {
+            "title": "Words of Radiance",
+            "author": "Brandon Sanderson",
+            "isbn": "978-0765376671",
+            "category": "Fantasy",
+            "available": false
+        },
+        {
+            "title": "Beyond the Shadows",
+            "author": "Brent Weeks",
+            "isbn": "978-0316288382",
+            "category": "Fantasy",
+            "available": true
         }
     ]
 }

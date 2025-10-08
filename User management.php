@@ -30,7 +30,7 @@ function userManagement(): CliMenu {
         });
         $insert->addItem('Go Back!', new GoBackAction);
     });
-    #Update
+    //Update
     $menuBuilder->addSubMenu('Update a user', function(CliMenuBuilder $update){
         $update->setTitle('List of users')
         ->disableDefaultItems();
@@ -62,7 +62,7 @@ function userManagement(): CliMenu {
         }
         $update->addItem('Go Back!', new GoBackAction);
     });
-    #Validate
+    //Validate
     if (!function_exists('validate_user')) {
     function validate_user($user, $isUpdate = false){
         $users = json_decode(file_get_contents(FILE_USERS), true) ?? ['Users' => []];
